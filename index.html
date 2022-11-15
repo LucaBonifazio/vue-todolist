@@ -13,16 +13,16 @@
 	<script src="js/script.js" defer></script>
 </head>
 <body>
-    <div id="root">
-        <h1>ToDo List</h1>
+    <div id="root" class="container text-center">
+        <h1 class="p-5">ToDo List</h1>
         <div class="new_todo">
-            <input @keyup.enter="addTodo" type="text" placeholder="Add Todo" v-model="newTodo">
-            <button @click="addTodo">Add</button>
+            <input @keyup.enter="addNewTodo" type="text" placeholder="Add Todo" v-model="newTodo">
+            <button @click="addNewTodo">Add</button>
         </div>
         <div class="todos_container">
-            <ul v-if="todos.length !== 0">
-                <li class="todo" v-for="(todo, i) in todos" :key="i">
-                    {{ todos[i].text }}
+            <ul v-if="todos.length !== 0" class="d-flex flex-column justify-content-center p-4">
+                <li class="todo list-group-item d-flex justify-content-between" v-for="(todo, i) in todos" :key="i">
+                    <span :class="{'disabled' : todo.done}" @click.prevent="toggleTodo(todo)">{{ todo.text }}</span>
                     <i class="fas fa-times" @click="deleteTodo(i)"></i>
                 </li>
             </ul>

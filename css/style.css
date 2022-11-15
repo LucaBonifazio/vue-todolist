@@ -1,0 +1,8 @@
+.fa-times:hover{
+    color: red;
+    transform: scale(1.1);
+}
+
+.todo .disabled {
+    text-decoration: line-through;
+}
