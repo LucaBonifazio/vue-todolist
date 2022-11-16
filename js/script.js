@@ -22,8 +22,12 @@ new Vue ({
     },
     methods: {
         addNewTodo() {
-            this.todos.push({...this.newTodo});
-            this.newTodo.text = '';
+            if(this.newTodo.text.trim()) {
+                this.newTodo.text = this.newTodo.text.trim();
+                const newObj = {...this.newTodo};
+                this.todos.push(newObj);
+                this.newTodo.text = '';
+            } 
         },
         deleteTodo(index) {
             this.todos.splice(index, 1);
