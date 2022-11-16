@@ -6,3 +6,7 @@
 .todo .disabled {
     text-decoration: line-through;
 }
+
+[v-cloak] {
+    display: none;
+  }
