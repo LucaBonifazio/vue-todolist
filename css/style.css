@@ -1,6 +1,13 @@
 .fa-times:hover{
-    color: red;
+    color: rgb(255, 0, 0);
     transform: scale(1.1);
+    cursor: pointer;
+}
+
+li span:hover{
+    color: rgb(75, 250, 0);
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .todo .disabled {

@@ -20,7 +20,7 @@ new Vue ({
     },
     methods: {
         addNewTodo() {
-            this.todos.push(this.newTodo);
+            this.todos.push({text: this.newTodo});
             this.newTodo = '';
         },
         deleteTodo(index) {
