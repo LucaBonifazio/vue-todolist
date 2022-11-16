@@ -12,6 +12,7 @@ li span:hover{
 
 .todo .disabled {
     text-decoration: line-through;
+    color: rgb(255, 0, 0);
 }
 
 [v-cloak] {

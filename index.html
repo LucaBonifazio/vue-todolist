@@ -22,7 +22,7 @@
         <div class="todos_container">
             <ul v-if="todos.length !== 0" class="d-flex flex-column justify-content-center p-4">
                 <li class="todo list-group-item d-flex justify-content-between p-3" v-for="(todo, i) in todos" :key="i">
-                    <span :class="{'disabled' : todo.done}" @click.prevent="toggleTodo(todo)">{{ todo.text }}</span>
+                    <span :class="{'disabled': todo.done}" @click.prevent="toggleTodo(todo)">{{ todo.text }}</span>
                     <i class="fas fa-times" @click="deleteTodo(i)"></i>
                 </li>
             </ul>
