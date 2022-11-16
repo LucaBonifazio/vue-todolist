@@ -16,7 +16,7 @@
     <div id="root" class="container text-center" v-cloak>
         <h1 class="p-5">ToDo List</h1>
         <div class="new_todo">
-            <input @keyup.enter="addNewTodo" type="text" placeholder="Add Todo" v-model="newTodo">
+            <input @keyup.enter="addNewTodo" type="text" placeholder="Add Todo" v-model="newTodo.text">
             <button @click="addNewTodo">Add</button>
         </div>
         <div class="todos_container">

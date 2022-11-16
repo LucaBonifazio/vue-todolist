@@ -1,8 +1,10 @@
 new Vue ({
     el: '#root',
     data: {
-        newTodo: '',
-        done: false,
+        newTodo: {
+            text: '',
+            done: false,
+        },
         todos: [
             {
                 text: 'pasta',
@@ -20,8 +22,8 @@ new Vue ({
     },
     methods: {
         addNewTodo() {
-            this.todos.push({text: this.newTodo});
-            this.newTodo = '';
+            this.todos.push({...this.newTodo});
+            this.newTodo.text = '';
         },
         deleteTodo(index) {
             this.todos.splice(index, 1);
